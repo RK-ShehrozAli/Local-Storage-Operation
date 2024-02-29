@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session Storage Operation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="readAll()">
+    <header>
+      <ul class="navbar">
+        <li><a href="Home">Home</a></li>
+        <li><a href="About Us">About Us</a></li>
+        <li><a href="Product">Product</a></li>
+        <li><a href="Customers">Customers</a></li>
+      </ul>
+      <div class="add_container">
+        <button onclick="add()">Add Product</button>
+      </div>
+    </header>
+
+    <div class="container">
+      <form class="create_form">
+        <input type="text" class="mobile" placeholder="Enter the Mobile" />
+        <input type="text" class="ram" placeholder="Enter the RAM" />
+        <input type="text" class="storage" placeholder="Enter the Storage" />
+        <input type="text" class="price" placeholder="Enter the Price" />
+        <button type="button" onclick="create()">Create</button>
+      </form>
+      <form class="update_form">
+        <input type="text" hidden class="id" />
+        <input type="text" class="umobile" />
+        <input type="text" class="uram" />
+        <input type="text" class="ustorage" />
+        <input type="text" class="uprice" />
+        <button type="button" onclick="update()">Update</button>
+      </form>
+    </div>
+    <table class="action">
+      <thead>
+        <th>Product</th>
+        <th>RAM</th>
+        <th>Storage</th>
+        <th>Price</th>
+        <th class="act">Action</th>
+      </thead>
+      <tbody class="data_table"></tbody>
+    </table>
+    <script src="./crud.js"></script>
+  </body>
+</html>
